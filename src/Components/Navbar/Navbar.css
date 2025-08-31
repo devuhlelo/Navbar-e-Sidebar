@@ -1,0 +1,169 @@
+/* Navbar e Reset Básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 7%;
+  transition: 0.5s;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1001; 
+}
+
+.logo {
+  width: 160px;
+  cursor: pointer;
+}
+
+/* Menu de Navegação */
+.navbar-menu {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Estilo para todos os links do menu */
+.navbar-menu li a {
+    color: #333; /* Cor padrão para links no tema light */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative; /* Contexto para o menu flutuante */
+}
+
+.dropdown-menu {
+  display: none; /* Esconde o menu por padrão */
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do link "Produtos" */
+  left: 50%; /* Centraliza o menu na horizontal */
+  transform: translateX(-50%);
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  display: block;
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostra o menu quando o mouse passa por cima do item pai */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilo para o ícone de seta */
+.dropdown-arrow-icon {
+    width: 12px; /* Tamanho pequeno para o ícone */
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* Rotaciona a seta quando o dropdown estiver aberto */
+.dropdown:hover .dropdown-arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Search Box e Ícones */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #242424;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.search-box input {
+  padding: 6px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 18px;
+  max-width: 200px;
+}
+
+.search-box input::placeholder {
+  color: white;
+}
+
+.search-box img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  width: 50px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+/* Temas Dark */
+.dark .navbar {
+  background: #000;
+  color: #fff;
+}
+
+.dark .navbar-menu li a {
+    color: #fff; /* Cor para links no tema dark */
+}
+
+.dark .search-box {
+  background: #fff;
+}
+
+.dark .search-box input {
+  color: #222;
+}
+
+.dark .search-box input::placeholder {
+  color: #222;
+}
+
+.dark .dropdown-menu {
+  background-color: #333; /* Fundo do dropdown no tema dark */
+}
+
+.dark .dropdown-menu li a {
+  color: #fff; /* Cor dos links no dropdown no tema dark */
+}
