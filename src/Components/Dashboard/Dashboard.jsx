@@ -15,8 +15,7 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    // Em uma aplicação real, aqui faria uma chamada para a API
-    // Por enquanto, usamos os dados do mockData
+
     setData(mockData);
   }, []);
 
