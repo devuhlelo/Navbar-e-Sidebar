@@ -9,8 +9,11 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
         <h2>Menu</h2>
         <a href="#">Inicio</a>
         <a href="#">Projetos</a>
-        <a href="#">Parceiros</a>
-        <a href="#">Contato</a>
+        <a href="/novo">Cadastrar Veiculos</a>
+        <a href="#">Linha Amarela</a>
+        <a href="#">Serviços</a>
+        <a href="#">Manutenção</a>
+        <a href="#">Transferência de Unidade </a>
       </div>
       <img
         src={setaSide}

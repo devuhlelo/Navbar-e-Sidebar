@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "frota": "DIRETORIA",
-    "unidade_contrato": "DIRETORIA",
-    "sub_unidade": "DIRETORIA",
+    "frota": "1701",
+    "unidade_contrato": "IBIRITÉ",
+    "sub_unidade": "SARZEDO",
     "marca": "JEEP",
     "modelo": "VEICULOS",
     "especie": "VEICULOS",
@@ -20,9 +20,9 @@
   },
   {
     "id": 2,
-    "frota": "DIRETORIA",
-    "unidade_contrato": "DIRETORIA",
-    "sub_unidade": "DIRETORIA",
+    "frota": "12121",
+    "unidade_contrato": "BRUMADINHO",
+    "sub_unidade": "MARIANA",
     "marca": "VOLKSWAGEN",
     "modelo": "OMNITIUS",
     "especie": "VEICULOS",
@@ -35,11 +35,11 @@
     "mod_trocado": "Não",
     "validade_dout": "12/03/2025",
     "validade_licen": "19/03/2025",
-    "reg_empresa": ""
+    "reg_empresa": "Heinaldo Montaria"
   },
   {
     "id": 3,
-    "frota": "ITAPIRANGA",
+    "frota": "9292",
     "unidade_contrato": "ITAPIRANGA",
     "sub_unidade": "DIRETORIA",
     "marca": "VOLKSWAGEN",
@@ -59,7 +59,7 @@
   {
     "id": 4,
     "frota": "1000",
-    "unidade_contrato": "VALE COMPL",
+    "unidade_contrato": "VALE VERDE",
     "sub_unidade": "BELO VALE",
     "marca": "SCANIA",
     "modelo": "GA40 BBA4 CS",
@@ -112,6 +112,44 @@
     "validade_dout": "12/03/2025",
     "validade_licen": "19/03/2025",
     "reg_empresa": "uHlelo Tecnologia"
+  },
+  {
+    "id": 7,
+    "frota": "2022",
+    "unidade_contrato": "VALE VERDE",
+    "sub_unidade": "LIBANO",
+    "marca": "SCANIA",
+    "modelo": "GA40 BBA4 CS",
+    "especie": "BAU",
+    "ano": "2015",
+    "placa": "PWX5430",
+    "renavan": "0104239254",
+    "chassi": "9BGSGA40F5B74118",
+    "km_atual": 590.002,
+    "perimetro": 20.002,
+    "mod_trocado": "Não",
+    "validade_dout": "12/03/2025",
+    "validade_licen": "19/03/2025",
+    "reg_empresa": "uHlelo Tecnologia"
+  },
+   {
+    "id": 8,
+    "frota": "6969",
+    "unidade_contrato": "CUIABA",
+    "sub_unidade": "AUGUSTA",
+    "marca": "HONDA",
+    "modelo": "24W TITAN",
+    "especie": "",
+    "ano": "2025",
+    "placa": "PDX5410",
+    "renavan": "0104239254",
+    "chassi": "9BGJGA40F5B74118",
+    "km_atual": 3.000,
+    "perimetro": 20.002,
+    "mod_trocado": "Não",
+    "validade_dout": "12/03/2025",
+    "validade_licen": "19/03/2025",
+    "reg_empresa": "Rogai JV"
   }
-  
+
 ]

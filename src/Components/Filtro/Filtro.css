@@ -1,0 +1,74 @@
+.filtro-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.filtro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #55cece;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+
+.filtro-campos {
+    padding: 20px;
+}
+
+.filtro-grupo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.filtro-grupo label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #555;
+}
+
+.filtro-grupo input, .filtro-grupo select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filtro-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.pesquisar-btn, .limpar-btn, .salvar-btn, .voltar-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pesquisar-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.limpar-btn, .salvar-btn, .voltar-btn {
+    background-color: #6c757d;
+    color: white;
+}

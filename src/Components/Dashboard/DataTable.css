@@ -9,9 +9,12 @@ table {
   background-color: #fff;
 }
 
-th, td {
+th,
+td {
   padding: 12px 15px;
   border: 1px solid #e9ecef;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 thead th {

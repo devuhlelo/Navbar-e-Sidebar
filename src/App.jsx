@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Cadastro from './Components/Cadastro/Cadastro';
+import Filtro from './Components/Filtro/Filtro';
 import mockData from './data/data.json';
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
       especie: getUniqueValues('especie'),
       ano: getUniqueValues('ano'),
       perimetro: getUniqueValues('perimetro'),
+      tipo_frota: getUniqueValues('tipo_frota'),
+      frota_cliente: getUniqueValues('frota_cliente'),
+      fornecedor_agregado: getUniqueValues('fornecedor_agregado'),
     });
   }, []);
 
@@ -50,7 +54,7 @@ function App() {
 
 function AppContent({ isSidebarOpen, toggleSidebar, theme, setTheme, data, uniqueOptions }) {
   const location = useLocation();
-  const showSidebar = location.pathname !== '/novo';
+  const showSidebar = location.pathname !== '/novo' && location.pathname !== '/filtro';
 
   return (
     <div className={`container ${theme}`}>
@@ -63,8 +67,16 @@ function AppContent({ isSidebarOpen, toggleSidebar, theme, setTheme, data, uniqu
           <Routes>
             <Route path="/" element={<Dashboard data={data} />} />
             <Route path="/novo" element={<Cadastro uniqueOptions={uniqueOptions} />} />
+            <Route path="/filtro" element={<Filtro uniqueOptions={uniqueOptions} />} /> 
           </Routes>
         </div>
+      </div>
+      <div className='footer'>
+      <footer>
+        <adress>
+          © 2025 Eduford Frotas - Todos os direitos reservados.
+        </adress>
+      </footer>
       </div>
     </div>
   );

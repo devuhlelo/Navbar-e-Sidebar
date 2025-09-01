@@ -11,7 +11,8 @@
 .search-inputs {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  width: 80px;
 }
 
 .search-inputs input {
@@ -55,9 +56,10 @@
 }
 
 .filter-buttons button {
+  background-color: #3f6e12;
+  color: white;
+  border: none;
   padding: 8px 12px;
-  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #fff;
   cursor: pointer;
 }

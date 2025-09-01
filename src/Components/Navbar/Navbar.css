@@ -11,7 +11,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: #55cece;
   padding: 15px 7%;
   transition: 0.5s;
   position: fixed; 
@@ -92,7 +92,7 @@ body, html {
 
 /* Estilo para o ícone de seta */
 .dropdown-arrow-icon {
-    width: 12px; /* Tamanho pequeno para o ícone */
+    width: 12px; 
     height: 12px;
     margin-left: 5px;
     vertical-align: middle;

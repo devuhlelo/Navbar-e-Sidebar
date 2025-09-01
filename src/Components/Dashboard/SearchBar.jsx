@@ -9,36 +9,37 @@ function SearchBar({ filters, onFilterChange }) {
     navigate('/novo');
   };
 
+  const handleSearchClick = () => {
+    navigate('/filtro');
+  };
+
   return (
     <div className="search-bar-container">
       <div className="search-inputs">
-        <input 
-          type="text" 
-          placeholder="Busca Rápida" 
-          name="busca_rapida" 
-          value={filters.busca_rapida} 
-          onChange={onFilterChange} 
+        <button className="new-btn" onClick={handleNewClick}>Novo</button>
+        <input
+          type="text"
+          placeholder="Busca Rápida"
+          name="busca_rapida"
+          value={filters.busca_rapida}
+          onChange={onFilterChange}
         />
-        <button className="new-btn" onClick={handleNewClick}>+ Novo</button>
+
       </div>
-      
-      {/* Resto do seu código... */}
+
       <div className="filter-row">
         <label>
           Frota:
-          <input 
-            type="text" 
-            name="frota" 
-            value={filters.frota} 
-            onChange={onFilterChange} 
+          <input
+            type="text"
+            name="frota"
+            value={filters.frota}
+            onChange={onFilterChange}
           />
         </label>
-        {/* ...outros inputs... */}
       </div>
       <div className="filter-buttons">
-        <button className="search-btn">Pesquisar</button>
-        <button className="columns-btn">Colunas</button>
-        <button className="export-btn">Exportar</button>
+        <button className="search-btn" onClick={handleSearchClick}>Pesquisar</button>
       </div>
     </div>
   );
