@@ -1,0 +1,40 @@
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #e9ecef;
+}
+
+thead th {
+  background-color: #f1f3f5;
+  color: #333;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+  background-color: #e2e6ea;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+}
+
+.data-vencida {
+  color: #dc3545;
+  font-weight: bold;
+}

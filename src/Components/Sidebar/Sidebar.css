@@ -1,22 +1,28 @@
-/* Sidebar */
 .sidebar {
-  position: fixed;
-  top: 60px; /* altura da navbar */
-  left: -250px; /* fora da tela inicialmente */
+  position: relative;
   width: 250px;
-  height: calc(100vh - 60px);
+  flex-shrink: 0;
+  height: calc(100vh - 60px); 
   background-color: #fff;
-  transition: left 0.3s ease;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  z-index: 1000; /* Mantém o z-index da sidebar */
+  transition: width 0.3s ease-in-out;
 }
 
-.sidebar.open {
-  left: 0; /* quando abrir */
+.sidebar.closed {
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar.closed h2,
+.sidebar.closed a {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
 }
 
 .sidebar h2 {
   padding: 20px;
+  transition: opacity 0.3s ease-in-out, visibility 0s;
 }
 
 .sidebar a {
@@ -24,20 +30,22 @@
   padding: 15px 20px;
   color: #333;
   text-decoration: none;
+  transition: opacity 0.3s ease-in-out, visibility 0s;
 }
 
-/* Botão (seta) */
+/* Botão da seta */
 .toggle-sidebar {
-  position: fixed;
-  top: 60px; /* Ajustado para começar na mesma altura da sidebar */
-  left: 10px;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  top: 70px;
+  left: 260px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  z-index: 1100;
-  transition: transform 0.3s ease;
+  transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 100;
 }
 
 .toggle-sidebar.rotated {
+  left: 10px;
   transform: rotate(180deg);
 }

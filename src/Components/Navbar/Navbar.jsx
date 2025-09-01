@@ -24,9 +24,9 @@ const Navbar = ({ theme, setTheme }) => {
                         Produtos <img src={arrow_dropdown} alt="Seta" className="dropdown-arrow-icon" /> {/* Ícone da seta */}
                     </a>
                     <ul className="dropdown-menu">
-                        <li><a href="/eletronicos">Eletrônicos</a></li>
-                        <li><a href="/roupas">Roupas</a></li>
-                        <li><a href="/livros">Livros</a></li>
+                        <li><a href="/eletronicos">Frotas</a></li>
+                        <li><a href="/roupas">Linha Amarela</a></li>
+                        <li><a href="/livros">Serviços</a></li>
                     </ul>
                 </li>
                 <li>Novidades</li>
