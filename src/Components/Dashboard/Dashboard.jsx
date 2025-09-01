@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import DataTable from './DataTable';
 import SearchBar from './SearchBar';
-import mockData from '../../data/data.json';
 import './Dashboard.css';
 
-function Dashboard() {
-  const [data, setData] = useState([]);
+function Dashboard({ data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState({
     frota: '',
@@ -13,11 +11,6 @@ function Dashboard() {
     marca: '',
     modelo: ''
   });
-
-  useEffect(() => {
-
-    setData(mockData);
-  }, []);
 
   useEffect(() => {
     const applyFilters = () => {
