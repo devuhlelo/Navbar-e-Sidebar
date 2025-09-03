@@ -13,7 +13,7 @@ export default function TransferenciaUnidade({ data, uniqueOptions }) {
     const veiculo = data.find(v => v.frota === frota);
     if (veiculo) {
       setVeiculoEncontrado(veiculo);
-      setNovaUnidade(''); // resetar seleção anterior
+      setNovaUnidade(''); 
     } else {
       alert('Veículo não encontrado para essa frota.');
       setVeiculoEncontrado(null);
@@ -24,7 +24,6 @@ export default function TransferenciaUnidade({ data, uniqueOptions }) {
     if (veiculoEncontrado && novaUnidade) {
       console.log(`Veículo de frota ${frota} transferido para a unidade: ${novaUnidade}`);
       alert(`Transferência de frota ${frota} para a unidade ${novaUnidade} realizada com sucesso!`);
-      // Aqui você pode adicionar lógica para atualizar os dados, se quiser
     } else {
       alert('Por favor, busque uma frota e selecione uma nova unidade.');
     }

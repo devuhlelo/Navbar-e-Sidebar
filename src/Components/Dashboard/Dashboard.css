@@ -1,7 +1,7 @@
-.dashboard-container {
-  flex-grow: 1;
-  
-  overflow-x: auto;
-  
-  padding: 20px;
+.dashboard-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+

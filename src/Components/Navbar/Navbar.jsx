@@ -10,61 +10,62 @@ import toggle_dark from '../../assets/day.png';
 import arrow_dropdown from '../../assets/seta-dropdown.png';
 
 const Navbar = ({ theme, setTheme, onLogout }) => {
-  const toggle_mode = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+    const toggle_mode = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    };
 
-  return (
-    <div className='navbar'>
-      <img
-        src={theme === 'light' ? logo_light : logo_dark}
-        alt='Logo'
-        className='logo'
-      />
-
-      <ul className='navbar-menu'>
-        <li>Início</li>
-        <li className='dropdown'>
-          <a href='#' className='dropdown-link'>
-            Produtos
+    return (
+        <div className='navbar'>
             <img
-              src={arrow_dropdown}
-              alt='Seta'
-              className='dropdown-arrow-icon'
+                src={theme === 'light' ? logo_light : logo_dark}
+                alt='Logo'
+                className='logo'
             />
-          </a>
-          <ul className='dropdown-menu'>
-            <li><a href='/eletronicos'>Frotas</a></li>
-            <li><a href='/roupas'>Linha Amarela</a></li>
-            <li><a href='/livros'>Serviços</a></li>
-          </ul>
-        </li>
-        <li>Novidades</li>
-        <li>Sobre</li>
-      </ul>
 
-      <div className='navbar-right'>
-        <div className='search-box'>
-          <input type='text' placeholder='Pesquisar' />
-          <img
-            src={theme === 'light' ? search_icon_light : search_icon_dark}
-            alt='Search Icon'
-          />
+            <ul className='navbar-menu'>
+                <li>Início</li>
+                <li className='dropdown'>
+                    <a href='#' className='dropdown-link'>
+                        Produtos
+                        <img
+                            src={arrow_dropdown}
+                            alt='Seta'
+                            className='dropdown-arrow-icon'
+                        />
+                    </a>
+                    <ul className='dropdown-menu'>
+                        <li><a href='/eletronicos'>Frotas</a></li>
+                        <li><a href='/roupas'>Linha Amarela</a></li>
+                        <li><a href='/livros'>Serviços</a></li>
+                    </ul>
+                </li>
+                <li>Novidades</li>
+                <li>Sobre</li>
+            </ul>
+
+            <div className='navbar-right'>
+                <div className='search-box'>
+                    <input type='text' placeholder='Pesquisar' />
+                    <img
+                        src={theme === 'light' ? search_icon_light : search_icon_dark}
+                        alt='Search Icon'
+                    />
+                </div>
+
+
+                <img
+                    onClick={toggle_mode}
+                    src={theme === 'light' ? toggle_light : toggle_dark}
+                    alt='Toggle Theme'
+                    className='toggle-icon'
+                />
+
+                <button className='logout-button' onClick={onLogout}>
+                    Sair
+                </button>
+            </div>
         </div>
-
-        <img
-          onClick={toggle_mode}
-          src={theme === 'light' ? toggle_light : toggle_dark}
-          alt='Toggle Theme'
-          className='toggle-icon'
-        />
-
-        <button className='logout-button' onClick={onLogout}>
-          Sair
-        </button>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Navbar;
