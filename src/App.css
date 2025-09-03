@@ -37,4 +37,22 @@ padding: 10px;
 align-items: center;
 display: flex;
 justify-content: center;
-box-shadow: rgb(38, 57, 77) 0px 20px 30px 10px;}
+box-shadow: rgb(38, 57, 77) 0px 20px 30px 10px;
+}
+
+/* Estilo para container da tela de login */
+.container.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f9fb;  /* cor clara para o fundo do login */
+  height: 100vh;         /* altura total da viewport */
+  width: 100vw;          /* largura total da viewport */
+}
+
+/* Ajuste para que na tela de login o main-layout não tenha margin-top */
+.container.login .main-layout {
+  margin-top: 0;
+  display: block; /* ou flex, conforme precisar */
+  flex-grow: 0;
+}

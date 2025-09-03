@@ -39,7 +39,6 @@
   font-weight: bold;
 }
 
-/* Botão da seta */
 .toggle-sidebar {
   position: absolute;
   top: 70px;
@@ -54,4 +53,31 @@
 .toggle-sidebar.rotated {
   left: 10px;
   transform: rotate(180deg);
+}
+
+.sidebar.light {
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.light h2,
+.sidebar.light a {
+  color: #333; 
+}
+
+.sidebar.dark {
+  background-color: #212529; 
+  box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.sidebar.dark h2 {
+  color: #f8f9fa; 
+}
+
+.sidebar.dark a {
+  color: #adb5bd; 
+}
+
+.sidebar.dark a:hover {
+  background-color: #343a40; 
 }
