@@ -60,11 +60,11 @@
 
 .sidebar.light h2,
 .sidebar.light a {
-  color: #ffffff; 
+  color: #333; 
 }
 
 .sidebar.dark {
-  background-color: #222; 
+  background-color: #1b1b1b; 
   box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
 }
 
