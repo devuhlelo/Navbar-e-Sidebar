@@ -39,7 +39,7 @@ function DataTable({ data, dashboardMode }) {
         <tbody>
           {data.map(item => (
             <tr key={item.id}>
-              {!dashboardMode && <td><input type="checkbox" /></td>}
+              {!dashboardMode}
               <td>{item.frota}</td>
               {dashboardMode ? <td>{item.marca}</td> : null}
               {dashboardMode ? <td>{item.unidade_contrato}</td> : null}

@@ -3,8 +3,6 @@
   width: 250px;
   flex-shrink: 0;
   height: calc(100vh - 60px);
-  background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
@@ -62,7 +60,7 @@
 
 .sidebar.light h2,
 .sidebar.light a {
-  color: #333; 
+  color: #ffffff; 
 }
 
 .sidebar.dark {
@@ -75,7 +73,7 @@
 }
 
 .sidebar.dark a {
-  color: #adb5bd; 
+  color: #ffffff; 
 }
 
 .sidebar.dark a:hover {
