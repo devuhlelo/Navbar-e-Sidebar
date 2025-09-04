@@ -72,15 +72,22 @@ function App() {
     return isLoggedIn ? children : <Navigate to="/login" />;
   };
 
-  return (
-    <div className={`container ${theme}`}>
-      {!isLoginPage && (
-        <Navbar theme={theme} setTheme={setTheme} onLogout={handleLogout} />
-      )}
-
+  // Se estiver na página de login, renderiza SOMENTE o login fora da estrutura principal
+  if (isLoginPage) {
+    return (
       <Routes>
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    );
+  }
 
+  // Para todas as outras rotas, renderiza o layout normal com Navbar, Sidebar, etc.
+  return (
+    <div className={`container ${theme}`}>
+      <Navbar theme={theme} setTheme={setTheme} onLogout={handleLogout} />
+
+      <Routes>
         <Route
           path="/"
           element={
@@ -127,21 +134,14 @@ function App() {
             </PrivateRoute>
           }
         />
-
-        {/* catch-all: se não logado, redireciona para login */}
-        <Route
-          path="*"
-          element={<Navigate to={isLoggedIn ? '/' : '/login'} />}
-        />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
-      {!isLoginPage && (
-        <div className="footer">
-          <footer>
-            <address>© 2025 Eduford Frotas - Todos os direitos reservados.</address>
-          </footer>
-        </div>
-      )}
+      <div className="footer">
+        <footer>
+          <address>© 2025 Sisgen Frotas - Todos os direitos reservados.</address>
+        </footer>
+      </div>
     </div>
   );
 }

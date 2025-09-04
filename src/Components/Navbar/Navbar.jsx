@@ -15,7 +15,7 @@ const Navbar = ({ theme, setTheme, onLogout }) => {
     };
 
     return (
-        <div className='navbar'>
+        <div className={`navbar ${theme}`}>
             <img
                 src={theme === 'light' ? logo_light : logo_dark}
                 alt='Logo'
@@ -23,9 +23,9 @@ const Navbar = ({ theme, setTheme, onLogout }) => {
             />
 
             <ul className='navbar-menu'>
-                <li>Início</li>
+                <li><a href="#">Início</a></li>
                 <li className='dropdown'>
-                    <a href='#' className='dropdown-link'>
+                    <a href="#" className='dropdown-link'>
                         Produtos
                         <img
                             src={arrow_dropdown}
@@ -34,24 +34,16 @@ const Navbar = ({ theme, setTheme, onLogout }) => {
                         />
                     </a>
                     <ul className='dropdown-menu'>
-                        <li><a href='/eletronicos'>Frotas</a></li>
-                        <li><a href='/roupas'>Linha Amarela</a></li>
-                        <li><a href='/livros'>Serviços</a></li>
+                        <li><a href='/frotas'>Frotas</a></li>
+                        <li><a href='/linha-amarela'>Linha Amarela</a></li>
+                        <li><a href='/servicos'>Serviços</a></li>
                     </ul>
                 </li>
-                <li>Novidades</li>
-                <li>Sobre</li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Sobre</a></li>
             </ul>
 
             <div className='navbar-right'>
-                <div className='search-box'>
-                    <input type='text' placeholder='Pesquisar' />
-                    <img
-                        src={theme === 'light' ? search_icon_light : search_icon_dark}
-                        alt='Search Icon'
-                    />
-                </div>
-
 
                 <img
                     onClick={toggle_mode}
